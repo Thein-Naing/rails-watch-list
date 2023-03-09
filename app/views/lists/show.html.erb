@@ -1,2 +1,12 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<h2><%= @list.name %></h2>
+<%= link_to "Edit",
+  new_list_path(@list),
+  data: {turbo_method: :edit, turbo_confirm: "Are you sure?"}
+%>
+<br>
+<p><strong>Bookmarks</strong></p>
+<ul class="list-group">
+  <% @bookmarks.each do |bookmark| %>
+    <li class="list-group-item"><%= @bookmark.comment %></li>
+  <% end %>
+</ul>
