@@ -1,0 +1,6 @@
+<h2><%= @bookmark.name %></h2>
+<%= link_to "Edit",
+  new_bookmark_path(@bookmark),
+  data: {turbo_method: :edit, turbo_confirm: "is it O.K?"}
+%>
+<br>
